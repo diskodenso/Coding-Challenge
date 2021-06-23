@@ -25,11 +25,18 @@ class Car {
       this.speed = 0;
     }
   }
-find
+
   stopTheCar() {
     this.speed = 0;
   }
-    speedCheck()
+
+    speedcheck() {
+        if (this.speed === 0) {
+            console.log("Car is not riding!");
+        } else {
+            console.log("Car is riding!");
+        }
+    }
 
   status() {
     return (
@@ -98,16 +105,20 @@ const addEvents = (myFavCar) => {
 };
 const accelerate = (myFavCar) => {
   myFavCar.accelerate(20);
-  displaySpeed(myFavCar);
+    displaySpeed(myFavCar);
+    car.speedcheck();
 };
 
 const brake = (myFavCar) => {
   myFavCar.brake(20);
-  displaySpeed(myFavCar);
+    displaySpeed(myFavCar);
+    car.speedcheck();
 };
 
 const stop = (myFavCar) => {
   myFavCar.stopTheCar();
-  displaySpeed(myFavCar);
+    displaySpeed(myFavCar);
+        car.speedcheck();
+
 };
 // Create a method inside the class definition that checks wether the Car is running or not and display it in the HTML
